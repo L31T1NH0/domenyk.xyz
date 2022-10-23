@@ -1,16 +1,13 @@
-body, html
+body
 {
-    color: #fff;
-}
-
-body{
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background: url("/images/background.png") center fixed no-repeat;
+    background: url("/images/background.png") no-repeat fixed;
     background-size: cover;
 }
 
 .container{
+    width: 100%;
     border-radius: 1rem;
     padding: 0.25rem;
     margin: 0 auto;
@@ -35,9 +32,7 @@ header > img
     width: 10rem;
     height: 10rem;
     border-radius: 10rem;
-    border: 0.25rem solid pink;
-
-
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 1.15);
 }
 
 header > h1
@@ -143,25 +138,18 @@ input
     font-weight: bolder;
     font-size: larger;
 }
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #eec4dc;
+}
+::-webkit-scrollbar-thumb {
+    background: #e5a0c6;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 192, 203, 0.8);
+}
 
-
-            /* Designing for scroll-bar */
-            ::-webkit-scrollbar {
-                width: 12px;
-            }
-
-            /* Track */
-            ::-webkit-scrollbar-track {
-                background: #eec4dc;
-            }
-
-            /* Handle */
-            ::-webkit-scrollbar-thumb {
-                background: #e5a0c6;
-                border-radius: 5px;
-            }
-
-            /* Handle on hover */
-            ::-webkit-scrollbar-thumb:hover {
-                background: rgba(255, 192, 203, 0.8);
-            }
+            
