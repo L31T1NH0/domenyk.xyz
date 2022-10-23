@@ -1,11 +1,9 @@
-body
-{
+body{
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background: url("/images/background.png") no-repeat fixed;
+    background: url("/Images/background/background.png") no-repeat fixed;
     background-size: cover;
 }
-
 .container{
     width: 100%;
     border-radius: 1rem;
@@ -17,26 +15,20 @@ body
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
 }
-
-header
-{
+header{
     margin: 0 auto;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
-
-header > img
-{
+header > img{
     margin: 0 auto;
     width: 10rem;
     height: 10rem;
     border-radius: 10rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 1.15);
 }
-
-header > h1
-{
+header > h1{
     margin: 0 auto;
     display: inline-block;
     font-size: 1.75rem;
@@ -48,86 +40,58 @@ header > h1
     border: 0.15rem solid pink;
     margin-top: 1.4rem;
 }
-
-ul
-{
+ul{
     width: 500px;
+    height: 635px;
     box-sizing: border-box;
     list-style: none;
     margin: 0 auto;
     padding: 2.84rem;
 }
-
-ul > li
-{
+ul > li{
     background: rgba(255, 192, 203, 0.8);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10rem;
     padding: 0.1rem;
     margin: 1rem 0.5rem;
+    border: 0.08rem solid pink;
 
 }
+ul > li > a{
 
-ul > li > a
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem
-}
-
-a
-{
-    color: #000;
+    color: #040404;
     text-decoration: none;
-}
-
-li
-{
-    border: 0.15rem solid pink;
     font-weight: bold;
-
+    display: flex;
+    justify-content: center;
+    
 }
-
-img
-{
-    margin-bottom: 0.6rem;
+li > img{
     margin-left: 11rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
-
 .texto{
     width: fit-content;
-    border-radius: 1.75rem;
+    border-radius: 2rem;
 }
-
-textarea
-{
+textarea{
     overflow-y: hidden;
     font-size: large;
     font-weight: bold;
-    background: rgba(255, 192, 203, 0.8);
+    background: rgba(254, 192, 204, 0.8);
     border: 0.15rem solid pink;
     border-radius: 0.75rem;
     outline: none;
-    padding: 1.4rem;
+    padding: 5.6%;
     width: 340px;
     height: 140px;
     resize: none;
 }
-
-.a-txt
-{
+.TXT-MSG{
     font-weight: bold;
     padding: 0.5rem;
 }
-
-input
-{
+input{
     margin-left: 20.75rem;
     border-style: none;
     border: 0.3;
@@ -151,5 +115,4 @@ input
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 192, 203, 0.8);
 }
-
-            
+          

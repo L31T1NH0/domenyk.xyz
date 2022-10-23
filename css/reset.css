@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab&display=swap');
-* {
+*{
     font-family: 'Open Sans', sans-serif;
 }
 html{
     overflow-x: hidden;
 }
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
