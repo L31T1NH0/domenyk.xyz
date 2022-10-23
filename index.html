@@ -14,7 +14,7 @@
     <body>
         <main>
             <header>
-                <img src="Images/photo/Domenyk.png"/>
+                <img class="photo" src="Images/photo/Domenyk.png"/>
                 <h1>@Leite</h1>
             </header>
             <ul>
@@ -48,6 +48,13 @@
                 </li>
             </ul>    
            </main>
+           <script type="text/javascript" src="/script/vanilla-tilt.js"></script>
+           <script>
+            	VanillaTilt.init(document.querySelectorAll(".photo"), {
+		            max: 10,
+		            speed: 80
+	            });
+            </script>
     </body>
 </div>
 </html>
