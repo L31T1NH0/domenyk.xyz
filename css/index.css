@@ -84,7 +84,7 @@ textarea{
     outline: none;
     padding: 5.6%;
     width: 340px;
-    height: 140px;
+    height: 120px;
     resize: none;
 }
 .TXT-MSG{
@@ -115,4 +115,12 @@ input{
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 192, 203, 0.8);
 }
-          
+.nome{
+    width: 340px;
+    height: 15px;
+    padding: 1.7;
+}       
+::placeholder {
+    color: #04040450;
+
+}
