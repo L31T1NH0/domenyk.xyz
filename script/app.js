@@ -6,14 +6,11 @@ const main_popup = document.querySelector('.main-popup');
 open_btn.addEventListener('click', () => {
  popup.style.visibility = 'visible';
 });
-
 close_btn.addEventListener('click', () => {
     popup.style.visibility = 'hidden';
 });
-
 window.addEventListener('click', (e) => {
-    if(e.target == document.querySelector('.popup-overlay')){
+    if(e.target == document.querySelector('.pix')){
         popup.style.visibility = 'hidden';
     }
 });
-   
