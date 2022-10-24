@@ -55,7 +55,6 @@ ul > li{
     padding: 0.1rem;
     margin: 1rem 0.5rem;
     border: 0.08rem solid pink;
-
 }
 ul > li > a{
     color: #040404;
@@ -63,7 +62,6 @@ ul > li > a{
     font-weight: bold;
     display: flex;
     justify-content: center;
-    
 }
 li > img{
     margin-left: 11rem;
@@ -163,7 +161,6 @@ button{
     display: flex;
     justify-content: center;
 }
-
 .close-popup{
     top: 0.10rem;
     right: 0.10rem;
@@ -177,7 +174,6 @@ button{
     max-width: 100%;  
     height: auto;  
     border-radius: 0.8rem;
-    
 }
 #background-video {
     width: 100vw;
@@ -189,9 +185,4 @@ button{
     top: 0;
     bottom: 0;
     z-index: -1;
-}
-.trick{
-    background-color: red;
-    height: 100vh;
-    width: 100vw;
 }
