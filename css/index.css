@@ -58,7 +58,6 @@ ul > li{
 
 }
 ul > li > a{
-
     color: #040404;
     text-decoration: none;
     font-weight: bold;
@@ -122,4 +121,76 @@ input{
 }       
 ::placeholder{
     color: #04040460;
+}
+.open-popup{
+    position: relative;
+    border: none;
+    color: #040404;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    background: none;
+}
+button{
+ margin: 0 auto;
+}
+.popup{
+    top: 60%;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    box-sizing: border-box;
+
+    
+}
+.pop-overlay{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+.main-popup{
+    position: absolute;  
+    height: 22rem;
+    width: 23rem;
+    background: pink;
+    padding: 30px 20px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.8rem;
+}
+.main-popup > a{
+    padding: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.close-popup{
+    position: absolute;
+    top: 0.01rem;
+    right: 0.1rem;
+    padding-right: 0.25rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.qrcode{
+    max-width: 100%;  
+    height: auto;  
+    border-radius: 0.8rem;
+    
+}
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
