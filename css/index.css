@@ -1,11 +1,10 @@
 body{
     margin-top: 2rem;
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
     background: url("/Images/background/background.png") no-repeat fixed;
     background-size: cover;
 }
 .container{
-    width: 100%;
     border-radius: 1rem;
     padding: 0.25rem;
     margin: 0 auto;
@@ -34,11 +33,11 @@ header > h1{
     font-size: 1.75rem;
     font-weight: bold;
     border-radius: 1rem;
-    background-color: #000a;
-    color: #fff;
+    background-color: pink;
+    color: #000;
     padding: 0.4rem 0.8rem;
-    border: 0.15rem solid pink;
     margin-top: 1.4rem;
+    border: 0.1rem solid #000;
 }
 ul{
     width: 31.25rem;
@@ -49,12 +48,11 @@ ul{
     padding: 2.84rem;
 }
 ul > li{
-    background: rgba(255, 192, 203, 0.8);
-    box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+    background: pink;
     border-radius: 10rem;
     padding: 0.1rem;
     margin: 1rem 0.5rem;
-    border: 0.08rem solid pink;
+    border: 0.1rem solid #000;
 }
 ul > li > a{
     color: #040404;
@@ -64,7 +62,7 @@ ul > li > a{
     justify-content: center;
 }
 li > img{
-    margin-left: 11rem;
+    margin-left: 11.24rem;
     display: flex;
 }
 .texto{
@@ -75,8 +73,7 @@ textarea{
     overflow-y: hidden;
     font-size: large;
     font-weight: bold;
-    background: rgba(254, 192, 204, 0.8);
-    border: 0.15rem solid pink;
+    background: pink;
     border-radius: 0.75rem;
     outline: none;
     padding: 5.6%;
@@ -132,11 +129,12 @@ input{
 }
 button{
     margin: 0 auto;
+    cursor: pointer;
 }
 .popup{
-    top: 33.6rem;
+    top: 33rem;
     position: absolute;
-    visibility: hidden;    
+    visibility: hidden;   
 }
 .pop-overlay{
     position: relative;
@@ -144,29 +142,33 @@ button{
     box-sizing: border-box;
 }
 .main-popup{
-    position: absolute;  
+    position: absolute;
     height: 22rem;
-    width: 23rem;
+    width: 22.2rem;
     background: pink;
-    padding: 30px 20px;
-    padding-bottom: 40px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-radius: 0.8rem;
+    border-radius: 1rem;
+    padding: 1.875rem 1.563rem;
+    padding-bottom: 3.75rem;
+    padding-top: 4.375rem;
+    border: 0.1rem solid #000;
 }
 .main-popup > a{
-    padding: 0.8rem;
-    font-weight: bold;
+    font-size: 20px;
+    padding: 1.5rem;
+    font-weight: bolder;
     display: flex;
     justify-content: center;
+    white-space: nowrap;
 }
 .close-popup{
-    top: 0.10rem;
+    top: -0.5rem;
     right: 0.10rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 10rem;
-    padding: 0.3rem;
+    padding: 0.4rem;
     position: absolute;
     cursor: pointer;
 }
@@ -174,6 +176,7 @@ button{
     max-width: 100%;  
     height: auto;  
     border-radius: 0.8rem;
+    border: 0.1rem solid #000;
 }
 #background-video {
     width: 100vw;
@@ -185,4 +188,18 @@ button{
     top: 0;
     bottom: 0;
     z-index: -1;
+}
+#noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 10rem;
+}
+#noSelect:focus {
+    outline: none !important;
+    border-radius: 10rem;
 }

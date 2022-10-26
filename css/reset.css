@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab&display=swap');
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("/Font/JetBrainsMono-Bold.ttf");
+}
 *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: JetBrainsMono;
+    font-size: 20px;
 }
 html{
     overflow-x: hidden;
