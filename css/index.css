@@ -173,7 +173,7 @@ button{
     cursor: pointer;
 }
 .qrcode{
-    max-width: 100%;  
+    max-width: 436px;  
     height: auto;  
     border-radius: 0.8rem;
     border: 0.2rem solid #000;
