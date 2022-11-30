@@ -161,7 +161,6 @@ button{
     font-weight: bolder;
     display: flex;
     justify-content: center;
-    white-space: nowrap;
 }
 .close-popup{
     top: -0.5rem;
@@ -197,9 +196,4 @@ button{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    border-radius: 10rem;
-}
-#noSelect:focus {
-    outline: none !important;
-    border-radius: 10rem;
 }
