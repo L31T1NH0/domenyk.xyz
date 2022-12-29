@@ -62,7 +62,7 @@ ul > li > a{
     justify-content: center;
 }
 li > img{
-    margin-left: 11.24rem;
+    margin: 0 auto;
     display: flex;
 }
 .texto{
