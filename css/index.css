@@ -4,6 +4,10 @@ body{
     background: url("/Images/background/background.jpg") no-repeat fixed;
     background-size: cover;}
 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0.25rem;
     margin: 0 auto;
     width: fit-content;
@@ -32,7 +36,7 @@ ul{
     width: 31.25rem;
     box-sizing: border-box;
     list-style: none;
-    margin-top: -40px;
+    margin-top: -50px;
     padding: 2.84rem;}
 ul > li{
     background: pink;
@@ -40,12 +44,24 @@ ul > li{
     padding: 0.1rem;
     margin: 1rem 0.5rem;
     border: 0.1rem solid #000;}
-ul > li > a{
+ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #040404;
     text-decoration: none;
     font-weight: bold;
-    display: flex;
-    justify-content: center;}
+}
+.open-popup{
+    padding: 0.1rem;
+    background-color: pink;
+    border-radius: 10rem;
+    border: 0.1rem solid #000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
 li > img{
     margin: 0 auto;
     display: flex;}
@@ -88,16 +104,12 @@ input{
     width: 22.45rem;
     height: 0.938rem;
     padding: 0.8rem;}
-.open-popup{
-    position: relative;
+button.open-popup{
     border: none;
-    color: #040404;
-    text-decoration: none;
-    font-weight: bold;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background: none;}
-button{
+    align-items: center;
     margin: 0 auto;
     cursor: pointer;}
 .popup{
