@@ -11,5 +11,5 @@ const handleSubmit = (event) => {
         body: JSON.stringify({ nome, mensagem }),
     }).then(function eraseText() {
         document.getElementById("myForm").reset();
-    });}
+    })}
 document.querySelector('form').addEventListener('submit', handleSubmit);
