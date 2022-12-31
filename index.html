@@ -52,14 +52,15 @@
                     <a class="TXT-MSG">
                         Tem algo para me dizer? :)
                     </a>
-                    <form action="https://api.sheetmonkey.io/form/8TEsW9UkgGya4A8M5gKzoy" method="post">
-                        <textarea spellcheck="false" placeholder="Como Você se chama?" class="nome" name="nome" id="nm" cols="2" rows="2" required ></textarea>
-                        <textarea spellcheck="false" name="Mensagem" id="Msg" cols="30" rows="8"  maxlength="234" required ></textarea>
-                        <input class="seta" type="submit" value="➤"/>
+                    <form id="myForm">
+                        <textarea spellcheck="false" placeholder="Como Você se chama?" class="nome" name="nome"></textarea>
+                        <textarea spellcheck="false" class="msg" name="msg" maxlength="234"></textarea>
+                        <input class="seta"  onclick="eraseText()"  type="submit" value="➤"/>
                     </form>
                 </li>
             </ul>    
            </main>
+     <script src="/script/form.js"></script>
      <script src="/script/app.js"></script> 
      <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fcdc6cd7b9a049ddaa20933b3838110b"}'></script><!-- End Cloudflare Web Analytics -->
     </body>
