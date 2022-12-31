@@ -111,12 +111,7 @@ button.open-popup{
     margin: 0 auto;
     cursor: pointer;}
 .popup{
-    position: absolute;
     visibility: hidden;}
-.pop-overlay{
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;}
 .main-popup{
     position: absolute;
     height: 22rem;
@@ -154,3 +149,4 @@ button.open-popup{
     user-select: none;}
 input.seta:hover{
     color:  #9932CC;}
+    
