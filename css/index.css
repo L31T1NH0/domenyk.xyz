@@ -159,3 +159,8 @@ button.open-popup{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;}
+
+
+input.seta:hover{
+    color: 		#9932CC;
+}
