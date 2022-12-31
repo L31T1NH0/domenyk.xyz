@@ -44,15 +44,14 @@ ul > li{
     padding: 0.1rem;
     margin: 1rem 0.5rem;
     border: 0.1rem solid #000;}
-ul li a{
+ul > li > a{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #040404;
     text-decoration: none;
-    font-weight: bold;
-}
+    font-weight: bold;}
 .open-popup{
     padding: 0.1rem;
     background-color: pink;
@@ -60,8 +59,7 @@ ul li a{
     border: 0.1rem solid #000;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
-}
+    align-items: center;}
 li > img{
     margin: 0 auto;
     display: flex;}
@@ -153,14 +151,6 @@ button.open-popup{
     border: 0.2rem solid #000;}
 #noSelect {
     -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;}
-
-
 input.seta:hover{
-    color:  #9932CC;
-}
+    color:  #9932CC;}
