@@ -1,19 +1,23 @@
 body{
     margin-top: 2rem;
-    margin-bottom: 10rem;
-    background: url("/Images/background/background.jpg") no-repeat fixed;
+    background: url("/Images/background/background.jpg") no-repeat center center fixed;
     background-size: cover;}
+::-webkit-scrollbar{
+    width: 0.75rem;}
+::-webkit-scrollbar-track{
+    background: #eec4dc;}
+::-webkit-scrollbar-thumb{
+    background: #e5a0c6;
+    border-radius: 0.313rem;}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 192, 203, 0.8);}
 .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 0.25rem;
     margin: 0 auto;
     width: fit-content;
     border-radius: 1rem;
     box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(0.344rem);}
+    backdrop-filter: blur(0.1rem);}
 header{
     margin-top: 1rem;
     display: flex;
@@ -52,56 +56,11 @@ ul > li > a{
     color: #040404;
     text-decoration: none;
     font-weight: bold;}
-.open-popup{
-    padding: 0.1rem;
-    background-color: pink;
-    border-radius: 10rem;
-    border: 0.1rem solid #000;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;}
 li > img{
     margin: 0 auto;
     display: flex;}
-.texto{
-    border-radius: 2rem;}
-textarea{
-    overflow-y: hidden;
-    font-size: large;
-    font-weight: bold;
-    background: pink;
-    border-radius: 0.75rem;
-    outline: none;
-    padding: 1.40rem;
-    width: 21.25rem;
-    height: 7.5rem;
-    resize: none;}
-.TXT-MSG{
-    font-weight: bold;
-    padding: 0.5rem;}
-input{
-    margin-left: 20.75rem;
-    border-style: none;
-    border: 0.3;
-    outline: none;
-    border-radius: 10rem;
-    padding: 1rem;
-    background: none;
-    font-weight: bolder;
-    font-size: larger;}
-::-webkit-scrollbar{
-    width: 0.75rem;}
-::-webkit-scrollbar-track{
-    background: #eec4dc;}
-::-webkit-scrollbar-thumb{
-    background: #e5a0c6;
-    border-radius: 0.313rem;}
-::-webkit-scrollbar-thumb:hover{
-    background: rgba(255, 192, 203, 0.8);}
-.nome{
-    width: 22.45rem;
-    height: 0.938rem;
-    padding: 0.8rem;}
+.popup{
+    visibility: hidden;}
 button.open-popup{
     border: none;
     display: flex;
@@ -110,8 +69,9 @@ button.open-popup{
     align-items: center;
     margin: 0 auto;
     cursor: pointer;}
-.popup{
-    visibility: hidden;}
+.open-popup{
+    background-color: pink;
+    border-radius: 10rem;}
 .main-popup{
     position: absolute;
     height: 22rem;
@@ -131,6 +91,11 @@ button.open-popup{
     font-weight: bolder;
     display: flex;
     justify-content: center;}
+.qrcode{
+    max-width: 436px;  
+    height: auto;  
+    border-radius: 0.8rem;
+    border: 0.2rem solid #000;}
 .close-popup{
     top: -0.5rem;
     right: 0.10rem;
@@ -139,14 +104,46 @@ button.open-popup{
     padding: 0.4rem;
     position: absolute;
     cursor: pointer;}
-.qrcode{
-    max-width: 436px;  
-    height: auto;  
-    border-radius: 0.8rem;
-    border: 0.2rem solid #000;}
+.close-popup{
+    top: -0.5rem;
+    right: 0.10rem;
+    font-size: 1.8rem;
+    border-radius: 10rem;
+    padding: 0.4rem;
+    position: absolute;
+    cursor: pointer;}
 #noSelect {
     -webkit-tap-highlight-color: transparent;
     user-select: none;}
+.texto{
+    border-radius: 2rem;}
+.nome{
+    width: 22.45rem;
+    height: 0.938rem;
+    padding: 0.8rem;}
+textarea{
+    overflow-y: hidden;
+    font-size: large;
+    font-weight: bold;
+    background: pink;
+    border-radius: 0.75rem;
+    outline: none;
+    padding: 1.40rem;
+    width: 21.25rem;
+    height: 7.5rem;
+    resize: none;}
+    
+.TXT-MSG{
+    font-weight: bold;
+    padding: 0.5rem;}
+input{
+    margin-left: 20.75rem;
+    border-style: none;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    font-weight: bolder;
+    font-size: larger;
+}
 input.seta:hover{
     color:  #9932CC;}
-    
