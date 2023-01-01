@@ -49,7 +49,6 @@ ul > li{
     margin: 1rem 0.5rem;
     border: 0.1rem solid #000;}
 ul > li > a{
-    outline: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +62,6 @@ li > img{
 .popup{
     visibility: hidden;}
 button.open-popup{
-    outline: none;
     border: none;
     display: flex;
     flex-direction: column;
@@ -134,7 +132,6 @@ textarea{
     width: 21.25rem;
     height: 7.5rem;
     resize: none;}
-    
 .TXT-MSG{
     font-weight: bold;
     padding: 0.5rem;}

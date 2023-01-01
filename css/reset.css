@@ -3,6 +3,7 @@
     src: url("/Font/JetBrainsMono-Bold.ttf");}
 *{
     font-family: JetBrainsMono;
-    font-size: 20px;}
+    font-size: 20px;
+    outline: none;}
 html{
     overflow-x: hidden;}
