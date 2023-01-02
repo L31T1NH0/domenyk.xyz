@@ -2,8 +2,9 @@ body{
     margin-bottom: 6rem;
     margin-top: 2rem;
     background: url("/Images/background/background.png") no-repeat center fixed;
-    background-size: cover;
-    background-attachment: fixed;}
+    background-size: cover, contain, auto;
+    background-attachment: fixed;
+    }
 ::-webkit-scrollbar{
     width: 0.75rem;}
 ::-webkit-scrollbar-track{
