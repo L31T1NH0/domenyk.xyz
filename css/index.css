@@ -1,7 +1,7 @@
 body{
     margin-bottom: 6rem;
     margin-top: 2rem;
-    background: url("/Images/background/background.png");
+    background: url("/Images/background/31cd41c991b956a6b7b8a060a5cb3460.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -42,7 +42,7 @@ header > h1{
     margin: 0 auto;
     font-size: 1.75rem;
     border-radius: 1rem;
-    background-color: pink;
+    background-color: violet;
     padding: 0.4rem 0.8rem;
     margin-top: 1.4rem;
     border: 0.1rem solid #000;}
@@ -53,7 +53,7 @@ ul{
     margin-top: -50px;
     padding: 2.84rem;}
 ul > li{
-    background: pink;
+    background: violet;
     border-radius: 10rem;
     padding: 0.1rem;
     margin: 1rem 0.5rem;
@@ -80,13 +80,13 @@ button.open-popup{
     margin: 0 auto;
     cursor: pointer;}
 .open-popup{
-    background-color: pink;
+    background-color: violet;
     border-radius: 10rem;}
 .main-popup{
     position: absolute;
     height: 22rem;
     width: 22.2rem;
-    background: pink;
+    background: violet;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -135,7 +135,7 @@ textarea{
     overflow-y: hidden;
     font-size: large;
     font-weight: bold;
-    background: pink;
+    background: violet;
     border-radius: 0.75rem;
     outline: none;
     padding: 1.40rem;
