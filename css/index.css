@@ -130,7 +130,9 @@ button.open-popup{
     height: 0.938rem;
     padding: 0.8rem;}
 .nome::placeholder{
-    color: #303030;}
+    color: #303030;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;}
 textarea{
     overflow-y: hidden;
     font-size: large;
