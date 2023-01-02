@@ -1,7 +1,7 @@
 body{
     margin-bottom: 6rem;
     margin-top: 2rem;
-    background: url("/Images/background/background.jpg") no-repeat center fixed;
+    background: url("/Images/background/background.png") no-repeat center fixed;
     background-size: cover;
     background-attachment: fixed;}
 ::-webkit-scrollbar{
