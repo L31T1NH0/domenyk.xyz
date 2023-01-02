@@ -22,12 +22,10 @@ body{
     border-radius: 1rem;
     box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(0.4rem);}
-@media (max-width: 800px) {
+@media (max-width: 800px){
     .container{
         box-shadow: none;
-        backdrop-filter: blur(0px);
-    }
-}
+        backdrop-filter: blur(0px);}}
 header{
     margin-top: 1rem;
     display: flex;
@@ -122,7 +120,7 @@ button.open-popup{
     padding: 0.4rem;
     position: absolute;
     cursor: pointer;}
-#noSelect {
+#noSelect{
     -webkit-tap-highlight-color: transparent;
     user-select: none;}
 .texto{
@@ -132,8 +130,7 @@ button.open-popup{
     height: 0.938rem;
     padding: 0.8rem;}
 .nome::placeholder{
-    color: #303030;
-}
+    color: #303030;}
 textarea{
     overflow-y: hidden;
     font-size: large;
@@ -155,7 +152,6 @@ input{
     padding: 1rem;
     background: none;
     font-weight: bolder;
-    font-size: larger;
-}
+    font-size: larger;}
 input.seta:hover{
     color:  #9932CC;}
