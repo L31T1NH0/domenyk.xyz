@@ -42,7 +42,7 @@ header > h1{
     margin: 0 auto;
     font-size: 1.75rem;
     border-radius: 1rem;
-    background-color: violet;
+    background-color: #ff59c7;
     padding: 0.4rem 0.8rem;
     margin-top: 1.4rem;
     border: 0.1rem solid #000;}
@@ -53,7 +53,7 @@ ul{
     margin-top: -50px;
     padding: 2.84rem;}
 ul > li{
-    background: violet;
+    background: #ff59c7;
     border-radius: 10rem;
     padding: 0.1rem;
     margin: 1rem 0.5rem;
@@ -80,13 +80,13 @@ button.open-popup{
     margin: 0 auto;
     cursor: pointer;}
 .open-popup{
-    background-color: violet;
+    background-color: #ff59c7;
     border-radius: 10rem;}
 .main-popup{
     position: absolute;
     height: 22rem;
     width: 22.2rem;
-    background: violet;
+    background: #ff59c7;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -131,11 +131,14 @@ button.open-popup{
     width: 22.45rem;
     height: 0.938rem;
     padding: 0.8rem;}
+.nome::placeholder{
+    color: #303030;
+}
 textarea{
     overflow-y: hidden;
     font-size: large;
     font-weight: bold;
-    background: violet;
+    background: #ff59c7;
     border-radius: 0.75rem;
     outline: none;
     padding: 1.40rem;
