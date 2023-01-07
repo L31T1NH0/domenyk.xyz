@@ -1,11 +1,8 @@
 body{
     margin-bottom: 6rem;
     margin-top: 2rem;
-    background: url("/Images/background/31cd41c991b956a6b7b8a060a5cb3460.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;}
+    background: url("/Images/background/background.jpg") no-repeat fixed center;
+    background-size: cover;}
 ::-webkit-scrollbar{
     width: 0.75rem;}
 ::-webkit-scrollbar-track{

@@ -1,5 +1,5 @@
 body{
-    background: url("/Images/background/background.jpg") no-repeat fixed;
+    background: url("/Images/background/background.jpg") no-repeat fixed center;
     background-size: cover;}
 .container{
     width: fit-content;
@@ -8,7 +8,7 @@ body{
     padding: 0.25rem;
     border-radius: 1rem;
     box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(0.344rem);}
+    backdrop-filter: blur(1rem);}
 p{
     font-size: 2rem;
     text-align: center;}
