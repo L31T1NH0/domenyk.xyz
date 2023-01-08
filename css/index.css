@@ -16,7 +16,7 @@ body{
     padding: 0.25rem;
     margin: 0 auto;
     width: fit-content;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(0.4rem);}
 @media (max-width: 800px){
@@ -31,12 +31,12 @@ header > img{
     margin: 0 auto;
     width: 10rem;
     height: 10rem;
-    border-radius: 10rem;
+    border-radius: 4rem;
     box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 1.15);}
 header > h1{
     margin: 0 auto;
     font-size: 1.75rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     background-color: #ff59c7;
     padding: 0.4rem 0.8rem;
     margin-top: 1.4rem;
@@ -49,7 +49,7 @@ ul{
     padding: 2.84rem;}
 ul > li{
     background: #ff59c7;
-    border-radius: 10rem;
+    border-radius: 0.8rem;
     padding: 0.1rem;
     margin: 1rem 0.5rem;
     border: 0.1rem solid #000;}
@@ -75,20 +75,18 @@ button.open-popup{
     margin: 0 auto;
     cursor: pointer;}
 .open-popup{
-    background-color: #ff59c7;
-    border-radius: 10rem;}
+    background-color: #ff59c7;}
 .main-popup{
     position: absolute;
     height: 22rem;
-    width: 22.2rem;
     background: #ff59c7;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-radius: 1rem;
-    padding: 1.875rem 1.563rem;
+    border-radius: 0.8rem;
+    padding: 1.875rem 1.564rem;
     padding-bottom: 3.75rem;
-    padding-top: 4.375rem;
+    padding-top: 4rem;
     border: 0.1rem solid #000;}
 .main-popup > a{
     font-size: 20px;
@@ -121,7 +119,7 @@ button.open-popup{
     -webkit-tap-highlight-color: transparent;
     user-select: none;}
 .texto{
-    border-radius: 2rem;}
+    border-radius: 0.8rem;}
 .nome{
     width: 22.45rem;
     height: 0.938rem;
