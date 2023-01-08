@@ -117,7 +117,6 @@ button.open-popup{
     position: absolute;
     cursor: pointer;}
 #noSelect{
-    -webkit-tap-highlight-color: transparent;
     user-select: none;}
 .texto{
     border-radius: 0.8rem;}
@@ -127,7 +126,6 @@ button.open-popup{
     padding: 0.8rem;}
 .nome::placeholder{
     color: #303030;
-    -webkit-tap-highlight-color: transparent;
     user-select: none;}
 textarea{
     overflow-y: hidden;
@@ -135,7 +133,6 @@ textarea{
     font-weight: bold;
     background: #ff59c7;
     border-radius: 0.75rem;
-    outline: none;
     padding: 1.40rem;
     width: 21.25rem;
     height: 7.5rem;
@@ -146,7 +143,6 @@ textarea{
 input{
     margin-left: 20.75rem;
     border-style: none;
-    outline: none;
     padding: 1rem;
     background: none;
     font-weight: bolder;
