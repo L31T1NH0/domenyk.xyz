@@ -79,6 +79,7 @@ button.open-popup{
 .main-popup{
     position: absolute;
     height: 22rem;
+    width: 22.2rem;
     background: #ff59c7;
     display: flex;
     justify-content: center;
