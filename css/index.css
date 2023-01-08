@@ -117,6 +117,7 @@ button.open-popup{
     position: absolute;
     cursor: pointer;}
 #noSelect{
+    -webkit-tap-highlight-color: transparent;
     user-select: none;}
 .texto{
     border-radius: 0.8rem;}
@@ -126,6 +127,7 @@ button.open-popup{
     padding: 0.8rem;}
 .nome::placeholder{
     color: #303030;
+    -webkit-tap-highlight-color: transparent;
     user-select: none;}
 textarea{
     overflow-y: hidden;
