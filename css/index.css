@@ -78,7 +78,7 @@ button.open-popup{
     background-color: #ff59c7;}
 .main-popup{
     position: absolute;
-    height: 22rem;
+    height: 24rem;
     width: 22.2rem;
     background: #ff59c7;
     display: flex;
@@ -86,8 +86,8 @@ button.open-popup{
     flex-direction: column;
     border-radius: 0.8rem;
     padding: 1.875rem 1.564rem;
-    padding-bottom: 3.75rem;
-    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
     border: 0.1rem solid #000;}
 .main-popup > a{
     font-size: 20px;
@@ -100,14 +100,6 @@ button.open-popup{
     height: auto;  
     border-radius: 0.8rem;
     border: 0.2rem solid #000;}
-.close-popup{
-    top: -0.5rem;
-    right: 0.10rem;
-    font-size: 1.8rem;
-    border-radius: 10rem;
-    padding: 0.4rem;
-    position: absolute;
-    cursor: pointer;}
 .close-popup{
     top: -0.5rem;
     right: 0.10rem;
