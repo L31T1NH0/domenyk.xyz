@@ -1,7 +1,7 @@
 body{
     margin-bottom: 6rem;
     margin-top: 2rem;
-    background: url("/Images/background/background.jpg") no-repeat fixed center;
+    background: url("/Assets/Images/background/background.jpg") no-repeat fixed center;
     background-size: cover;}
 ::-webkit-scrollbar{
     width: 0.75rem;}
@@ -87,7 +87,7 @@ button.open-popup{
     border-radius: 0.8rem;
     padding: 1.875rem 1.564rem;
     padding-bottom: 4rem;
-    padding-top: 2rem;
+    padding-top: 2zrem;
     border: 0.1rem solid #000;}
 .main-popup > a{
     font-size: 20px;

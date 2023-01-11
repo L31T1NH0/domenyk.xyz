@@ -1,6 +1,6 @@
 @font-face {
     font-family: "JetBrainsMono";
-    src: url("/Font/JetBrainsMono-Bold.ttf");}
+    src: url("/Assets/Font/JetBrainsMono-Bold.ttf");}
 *{
     font-family: JetBrainsMono;
     font-size: 20px;
