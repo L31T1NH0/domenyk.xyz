@@ -1,7 +1,7 @@
 body{
     margin-bottom: 6rem;
     margin-top: 2rem;
-    background: url("/Assets/Images/Background/Background.jpg") no-repeat fixed center;
+    background: url("/Assets/Images/background/background.jpg") no-repeat fixed center;
     background-size: cover;}
 ::-webkit-scrollbar{
     width: 0.75rem;}
