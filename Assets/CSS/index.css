@@ -94,10 +94,8 @@ button.open-popup{
     padding: 1.5rem;
     font-weight: bolder;
     display: flex;
-    justify-content: center;}
-@media (max-width: 720px) {
-    .donate{
-        white-space: nowrap}}
+    justify-content: center;
+    white-space: nowrap;}
 .qrcode{
     max-width: 436px;  
     height: auto;  
