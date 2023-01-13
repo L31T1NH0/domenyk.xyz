@@ -19,7 +19,7 @@ body{
     border-radius: 0.8rem;
     box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(0.4rem);}
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .container{
         box-shadow: none;
         backdrop-filter: blur(0px);}}
@@ -89,12 +89,15 @@ button.open-popup{
     padding-bottom: 4rem;
     padding-top: 2rem;
     border: 0.1rem solid #000;}
-.main-popup > a{
+.main-popup > .donate{
     font-size: 20px;
     padding: 1.5rem;
     font-weight: bolder;
     display: flex;
     justify-content: center;}
+@media (max-width: 720px) {
+    .donate{
+        font-size: 18px;}}
 .qrcode{
     max-width: 436px;  
     height: auto;  
@@ -110,8 +113,6 @@ button.open-popup{
     cursor: pointer;}
 #noSelect{
     user-select: none;}
-.texto{
-    border-radius: 0.8rem;}
 .nome{
     width: 22.45rem;
     height: 0.938rem;
