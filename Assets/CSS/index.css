@@ -97,7 +97,7 @@ button.open-popup{
     justify-content: center;}
 @media (max-width: 720px) {
     .donate{
-        font-size: 18px;}}
+        white-space: nowrap}}
 .qrcode{
     max-width: 436px;  
     height: auto;  
