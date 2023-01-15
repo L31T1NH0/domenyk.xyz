@@ -4,6 +4,7 @@
 *{
     font-family: JetBrainsMono;
     font-size: 20px;
+    white-space: nowrap;
     outline: none;
     -webkit-tap-highlight-color: transparent;}
 html{
