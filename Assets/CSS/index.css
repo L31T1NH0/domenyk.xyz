@@ -12,6 +12,20 @@ body{
     border-radius: 0.313rem;}
 ::-webkit-scrollbar-thumb:hover{
     background: rgba(255, 192, 203, 0.8);}
+.share{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;}
+.cLink{
+    position: absolute;
+    left: 574px;
+    top: 4px;
+    background: none;
+    outline: none;
+    border: none;}
+#linkInput{
+    visibility: hidden;
+    position: absolute;}
 .container{
     padding: 0.25rem;
     margin: 0 auto;
@@ -27,7 +41,7 @@ header{
     margin-top: 1rem;
     display: flex;
     flex-direction: column;}
-header > img{
+header > .photo{
     margin: 0 auto;
     width: 10rem;
     height: 10rem;
@@ -97,7 +111,7 @@ button.open-popup{
     justify-content: center;
     white-space: nowrap;}
 .qrcode{
-    max-width: 436px;  
+    max-width: 436px;
     height: auto;  
     border-radius: 0.8rem;
     border: 0.2rem solid #000;}
