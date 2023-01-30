@@ -5,7 +5,7 @@ body{
     background-size: cover;}
 @media (max-width: 800px) {
     body{
-        background-image: linear-gradient(#939, #ff3535)}}
+        background-image: linear-gradient(#9400d3, #d40000)}}
 ::-webkit-scrollbar{
     width: 0.75rem;}
 ::-webkit-scrollbar-track{
