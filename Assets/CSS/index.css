@@ -3,6 +3,9 @@ body{
     margin-top: 2rem;
     background: url("/Assets/Images/background/background.jpg") no-repeat fixed center;
     background-size: cover;}
+@media (max-width: 800px) {
+    body{
+        background-image: linear-gradient(#939, #ff3535)}}
 ::-webkit-scrollbar{
     width: 0.75rem;}
 ::-webkit-scrollbar-track{
