@@ -82,7 +82,8 @@ button.open-popup{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    cursor: pointer;}
+    cursor: pointer;
+    font-weight: bold;}
 .open-popup{
     background: #ff59c7;}
 .main-popup{
