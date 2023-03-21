@@ -16,13 +16,16 @@ async function submitForm(event) {
     return;
   }
 
+  // Resetando os campos do formulário
+  event.target.reset();
+
   // Obtendo a data e hora atual formatada
   const date = new Date();
   const hora = date.toLocaleTimeString('pt-BR', {hour12: true, second: undefined});
   const dataHora = hora + ' ' + date.toLocaleDateString('pt-BR');
 
   // Enviando os dados do formulário para a API
-  const response = await fetch('https://api.sheetmonkey.io/form/hexNZ9BHTtdqErQ1G573Av', {
+  const response = await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
@@ -30,12 +33,6 @@ async function submitForm(event) {
     },
     body: JSON.stringify({ Data: dataHora, Nome: nome, Mensagem: mensagem }),
   });
-
-  // Verificando se a requisição foi bem-sucedida
-  if (response.ok) {
-    // Resetando os campos do formulário
-    document.getElementById('myForm').reset();
-  }
 }
 
 // Selecionando o formulário e adicionando listener de evento
