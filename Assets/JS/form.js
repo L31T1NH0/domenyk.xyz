@@ -1,3 +1,11 @@
+// Selecionando o campo de nome e adicionando ouvinte de evento de teclado
+const nomeInput = document.querySelector('textarea[name=nome]');
+nomeInput.addEventListener('keydown', function(event) {
+  if (event.keyCode === 13 && event.shiftKey) {
+    event.preventDefault();
+  }
+});
+
 // Função para enviar o formulário
 async function submitForm(event) {
   event.preventDefault();
