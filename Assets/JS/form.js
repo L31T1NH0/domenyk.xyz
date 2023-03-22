@@ -21,17 +21,20 @@ async function submitForm(event) {
 
   // Obtendo a data e hora atual formatada
   const date = new Date();
-  const hora = date.toLocaleTimeString('pt-BR', {hour12: true, second: undefined});
+  const hora = date.toLocaleTimeString('pt-BR', {hour12: true});
   const dataHora = hora + ' ' + date.toLocaleDateString('pt-BR');
 
+  // Obtendo informações do navegador e sistema operacional do usuário
+  const platform = navigator.userAgentData.platform;
+
   // Enviando os dados do formulário para a API
-  const response = await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
+  await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
       'Content-type': 'application/json',
     },
-    body: JSON.stringify({ Data: dataHora, Nome: nome, Mensagem: mensagem }),
+    body: JSON.stringify({ Data: dataHora, Nome: nome, Mensagem: mensagem, Sistema: platform }),
   });
 }
 
