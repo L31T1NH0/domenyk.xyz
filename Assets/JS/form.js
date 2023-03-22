@@ -6,6 +6,13 @@ nomeInput.addEventListener('keydown', function(event) {
   }
 });
 
+// Função para obter o endereço IP do usuário
+async function getIp() {
+  const response = await fetch('https://api.ipify.org/?format=json');
+  const data = await response.json();
+  return data.ip;
+}
+
 // Função para enviar o formulário
 async function submitForm(event) {
   event.preventDefault();
@@ -35,14 +42,17 @@ async function submitForm(event) {
   // Obtendo informações do navegador e sistema operacional do usuário
   const platform = navigator.userAgentData.platform;
 
+  // Obtendo o endereço IP do usuário
+  const ip = await getIp();
+
   // Enviando os dados do formulário para a API
-  await fetch('https://api.sheetmonkey.io/form/gPAifHgZC5vUBWAaz3Y2hG', {
+  await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
       'Content-type': 'application/json',
     },
-    body: JSON.stringify({Sistema: platform, Data: dataHora, Nome: nome, Mensagem: mensagem}),
+    body: JSON.stringify({'Endereço IP': ip, Sistema: platform, Data: dataHora, Nome: nome, Mensagem: mensagem}),
   });
 }
 
