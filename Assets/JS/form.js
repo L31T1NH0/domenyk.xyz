@@ -42,7 +42,7 @@ async function submitForm(event) {
       'Accept': 'application/json',
       'Content-type': 'application/json',
     },
-    body: JSON.stringify({ Data: dataHora, Nome: nome, Mensagem: mensagem, Sistema: platform }),
+    body: JSON.stringify({Sistema: platform, Data: dataHora, Nome: nome, Mensagem: mensagem}),
   });
 }
 
