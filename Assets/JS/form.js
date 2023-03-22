@@ -36,7 +36,7 @@ async function submitForm(event) {
   const platform = navigator.userAgentData.platform;
 
   // Enviando os dados do formulário para a API
-  await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
+  await fetch('https://api.sheetmonkey.io/form/4PXtKo5UHUeHoaPnPwmyt7', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
