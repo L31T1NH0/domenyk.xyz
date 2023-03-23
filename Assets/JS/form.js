@@ -93,4 +93,4 @@ mensagemInput.addEventListener('keydown', function(event) {
     event.preventDefault();
     form.dispatchEvent(new Event('submit'));
   }
-});
+})
