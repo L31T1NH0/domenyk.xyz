@@ -18,14 +18,9 @@ async function getIp() {
 
 // Função para obter a localização a partir das coordenadas geográficas
 async function getLocation(latitude, longitude) {
-  try {
-    const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1&accept-language=pt-BR`);
-    const data = await response.json();
-    return data.address;
-  } catch (error) {
-    console.log(error);
-    return null;
-  }
+  const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1&accept-language=pt-BR`);
+  const data = await response.json();
+  return data.address;
 }
 
 // Função para enviar o formulário
@@ -46,8 +41,8 @@ async function submitForm(event, location) {
     return;
   }
 
-    // Obtendo o endereço IP do usuário
-    const ip = await getIp();
+  // Obtendo o endereço IP do usuário
+  const ip = await getIp();
 
   // Resetando os campos do formulário
   event.target.reset();
@@ -61,13 +56,21 @@ async function submitForm(event, location) {
   const platform = navigator.userAgentData.platform;
 
   // Enviando os dados do formulário para a API
+  const formData = {País: null, Estado: null, Cidade: null, 'Endereço IP': ip, Sistema: platform, 'Data e Hora': dataHora, Nome: nome, Mensagem: mensagem};
+  
+  if (location) {
+    formData.País = location.country || null;
+    formData.Estado = location.state || null;
+    formData.Cidade = location.city || null;
+  }
+
   await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
       'Content-type': 'application/json',
     },
-    body: JSON.stringify({País: location.country, Estado: location.state, Cidade: location.city, 'Endereço IP': ip, Sistema: platform, 'Data e Hora': dataHora, Nome: nome, Mensagem: mensagem}),
+    body: JSON.stringify(formData),
   });
 }
 
@@ -76,19 +79,31 @@ const form = document.querySelector('form');
 form.addEventListener('submit', submitForm);
 
 window.addEventListener('load', async function() {
-  // Obtendo a localização do usuário
-  const successCallback = async (position) => {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const location = await getLocation(latitude, longitude);
+  // Verificando se o dispositivo é mobile
+  const isMobile = /Mobi/.test(navigator.userAgent);
+
+  if (isMobile) {
+    // Caso o dispositivo seja mobile, não solicitar a localização e permitir valores nulos
+    const location = { country: null, state: null, city: null };
 
     // Chamando a função submitForm com a localização obtida
     const form = document.querySelector('form');
     form.addEventListener('submit', (event) => submitForm(event, location));
-  };
+  } else {
+    // Obtendo a localização do usuário
+    const successCallback = async (position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      const location = await getLocation(latitude, longitude);
 
-  // Obtendo as coordenadas geográficas do usuário
-  navigator.geolocation.getCurrentPosition(successCallback);
+      // Chamando a função submitForm com a localização obtida
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (event) => submitForm(event, location));
+    };
+
+    // Obtendo as coordenadas geográficas do usuário
+    navigator.geolocation.getCurrentPosition(successCallback);
+  }
 });
 
 // Adicionando listener de evento para o input de mensagem
