@@ -41,8 +41,8 @@ async function submitForm(event, location) {
     return;
   }
 
-  // Obtendo o endereço IP do usuário
-  const ip = await getIp();
+    // Obtendo o endereço IP do usuário
+    const ip = await getIp();
 
   // Resetando os campos do formulário
   event.target.reset();
@@ -56,21 +56,13 @@ async function submitForm(event, location) {
   const platform = navigator.userAgentData.platform;
 
   // Enviando os dados do formulário para a API
-  const formData = {País: null, Estado: null, Cidade: null, 'Endereço IP': ip, Sistema: platform, 'Data e Hora': dataHora, Nome: nome, Mensagem: mensagem};
-  
-  if (location) {
-    formData.País = location.country || null;
-    formData.Estado = location.state || null;
-    formData.Cidade = location.city || null;
-  }
-
   await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
     method: 'post',
     headers: {
       'Accept': 'application/json',
       'Content-type': 'application/json',
     },
-    body: JSON.stringify(formData),
+    body: JSON.stringify({País: location.country, Estado: location.state, Cidade: location.city, 'Endereço IP': ip, Sistema: platform, 'Data e Hora': dataHora, Nome: nome, Mensagem: mensagem}),
   });
 }
 
@@ -79,31 +71,19 @@ const form = document.querySelector('form');
 form.addEventListener('submit', submitForm);
 
 window.addEventListener('load', async function() {
-  // Verificando se o dispositivo é mobile
-  const isMobile = /Mobi/.test(navigator.userAgent);
-
-  if (isMobile) {
-    // Caso o dispositivo seja mobile, não solicitar a localização e permitir valores nulos
-    const location = { country: null, state: null, city: null };
+  // Obtendo a localização do usuário
+  const successCallback = async (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const location = await getLocation(latitude, longitude);
 
     // Chamando a função submitForm com a localização obtida
     const form = document.querySelector('form');
     form.addEventListener('submit', (event) => submitForm(event, location));
-  } else {
-    // Obtendo a localização do usuário
-    const successCallback = async (position) => {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      const location = await getLocation(latitude, longitude);
+  };
 
-      // Chamando a função submitForm com a localização obtida
-      const form = document.querySelector('form');
-      form.addEventListener('submit', (event) => submitForm(event, location));
-    };
-
-    // Obtendo as coordenadas geográficas do usuário
-    navigator.geolocation.getCurrentPosition(successCallback);
-  }
+  // Obtendo as coordenadas geográficas do usuário
+  navigator.geolocation.getCurrentPosition(successCallback);
 });
 
 // Adicionando listener de evento para o input de mensagem
