@@ -18,9 +18,14 @@ async function getIp() {
 
 // Função para obter a localização a partir das coordenadas geográficas
 async function getLocation(latitude, longitude) {
-  const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1&accept-language=pt-BR`);
-  const data = await response.json();
-  return data.address;
+  try {
+    const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1&accept-language=pt-BR`);
+    const data = await response.json();
+    return data.address;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
 }
 
 // Função para enviar o formulário
