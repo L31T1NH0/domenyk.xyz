@@ -1,6 +1,9 @@
 // Selecionando o campo de nome e adicionando ouvinte de evento de teclado
 const nomeInput = document.querySelector('textarea[name=nome]');
 nomeInput.addEventListener('keydown', function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+  }
   if (event.keyCode === 13 && event.shiftKey) {
     event.preventDefault();
   }
@@ -13,8 +16,15 @@ async function getIp() {
   return data.ip;
 }
 
+// Função para obter a localização a partir das coordenadas geográficas
+async function getLocation(latitude, longitude) {
+  const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1&accept-language=pt-BR`);
+  const data = await response.json();
+  return data.address;
+}
+
 // Função para enviar o formulário
-async function submitForm(event) {
+async function submitForm(event, location) {
   event.preventDefault();
 
   // Selecionando os campos do formulário
@@ -31,6 +41,9 @@ async function submitForm(event) {
     return;
   }
 
+    // Obtendo o endereço IP do usuário
+    const ip = await getIp();
+
   // Resetando os campos do formulário
   event.target.reset();
 
@@ -42,9 +55,6 @@ async function submitForm(event) {
   // Obtendo informações do navegador e sistema operacional do usuário
   const platform = navigator.userAgentData.platform;
 
-  // Obtendo o endereço IP do usuário
-  const ip = await getIp();
-
   // Enviando os dados do formulário para a API
   await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
     method: 'post',
@@ -52,13 +62,29 @@ async function submitForm(event) {
       'Accept': 'application/json',
       'Content-type': 'application/json',
     },
-    body: JSON.stringify({'Endereço IP': ip, Sistema: platform, Data: dataHora, Nome: nome, Mensagem: mensagem}),
+    body: JSON.stringify({País: location.country, Estado: location.state, Cidade: location.city, 'Endereço IP': ip, Sistema: platform, 'Data e Hora': dataHora, Nome: nome, Mensagem: mensagem}),
   });
 }
 
 // Selecionando o formulário e adicionando listener de evento
 const form = document.querySelector('form');
 form.addEventListener('submit', submitForm);
+
+window.addEventListener('load', async function() {
+  // Obtendo a localização do usuário
+  const successCallback = async (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const location = await getLocation(latitude, longitude);
+
+    // Chamando a função submitForm com a localização obtida
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => submitForm(event, location));
+  };
+
+  // Obtendo as coordenadas geográficas do usuário
+  navigator.geolocation.getCurrentPosition(successCallback);
+});
 
 // Adicionando listener de evento para o input de mensagem
 const mensagemInput = document.querySelector('textarea[name=msg]');
