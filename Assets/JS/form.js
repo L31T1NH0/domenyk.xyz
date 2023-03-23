@@ -52,7 +52,7 @@ async function submitForm(event) {
       'Accept': 'application/json',
       'Content-type': 'application/json',
     },
-    body: JSON.stringify({'Endereço IP': ip, Sistema: platform, Data: dataHora, Nome: nome, Mensagem: mensagem}),
+    body: JSON.stringify({'Endereço IP': ip, Sistema: platform, 'Data e Hora': dataHora, Nome: nome, Mensagem: mensagem}),
   });
 }
 
