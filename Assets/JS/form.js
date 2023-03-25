@@ -41,12 +41,13 @@ async function submitForm(event) {
   // Obtendo a data e hora atual formatada
   const date = new Date();
   const hora = date.toLocaleTimeString('pt-BR', {hour12: true});
-  const dataHora = hora + ' ' + date.toLocaleDateString('pt-BR');
+  const dataHora = hora + ' ' + date.toLocaleDateString('pt-BR'); 
+  console.log(dataHora);  
 
   // Obtendo informações do navegador e sistema operacional do usuário
-  const platform = navigator.userAgentData.platform;
+  const platform = navigator.userAgentData ? navigator.userAgentData.platform : /\((.*?)\)/.exec(navigator.userAgent)[1];
   console.log(`Plataforma: ${platform}`);
-
+  
   try {
     // Obtendo o endereço IP do usuário
     const ip = await getIp();
@@ -63,7 +64,7 @@ async function submitForm(event) {
 
     // Verificando se o envio foi bem-sucedido
     if (response.ok) {
-      console.log(`Mensagem enviada com sucesso: ${mensagem}`);
+      console.log(`A Mensagem de @${nome}, foi enviada com sucesso: -"${mensagem}"`);
     } else {
       throw new Error('Erro ao enviar a mensagem.');
     }
