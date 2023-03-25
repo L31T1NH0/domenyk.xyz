@@ -43,7 +43,7 @@ header > h1{
     background: #ff59c7;
     padding: 0.4rem 0.8rem;
     margin-top: 1.4rem;
-    border: 0.1rem solid #000;}
+    border: 1px solid}
 ul{
     margin: 0 auto;
     width: 31.25rem;
@@ -80,16 +80,16 @@ button.open-popup{
 .open-popup{
     background: #ff59c7;}
 .main-popup{
-    margin: 0px 0px 0px 10px;
+    margin: 0px 0px 0px +10px;
     position: absolute;
     height: 560px;
-    width: 489.01px;
+    width: 489px;
     background: #ff59c7;
     display: flex;
     justify-content: center;
     flex-direction: column;
     border-radius: 0.8rem;
-    border: 3px solid #000;}
+    border: 1px solid #000;}
 .main-popup > .donate{
     margin: 0 auto;
     padding: 1.5rem;
