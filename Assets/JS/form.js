@@ -1,11 +1,3 @@
-// Selecionando o campo de nome e adicionando ouvinte de evento de teclado
-const nomeInput = document.querySelector('textarea[name=nome]');
-nomeInput.addEventListener('keydown', function(event) {
-  if (event.keyCode === 13 && event.shiftKey) {
-    event.preventDefault();
-  }
-});
-
 // Função para obter o endereço IP do usuário
 async function getIp() {
   const response = await fetch('https://api.ipify.org/?format=json');
@@ -60,11 +52,3 @@ async function submitForm(event) {
 const form = document.querySelector('form');
 form.addEventListener('submit', submitForm);
 
-// Adicionando listener de evento para o input de mensagem
-const mensagemInput = document.querySelector('textarea[name=msg]');
-mensagemInput.addEventListener('keydown', function(event) {
-  if (event.keyCode === 13 && !event.shiftKey) {
-    event.preventDefault();
-    form.dispatchEvent(new Event('submit'));
-  }
-});
