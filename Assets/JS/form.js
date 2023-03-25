@@ -1,11 +1,11 @@
-// Função para obter o endereço IP do usuário
+// Função assíncrona para obter o endereço IP do usuário
 async function getIp() {
   const response = await fetch('https://api.ipify.org/?format=json');
-  const data = await response.json();
-  return data.ip;
+  const { ip } = await response.json();
+  return ip;
 }
 
-// Função para enviar o formulário
+// Função assíncrona para enviar o formulário
 async function submitForm(event) {
   event.preventDefault();
 
@@ -18,7 +18,7 @@ async function submitForm(event) {
   const mensagem = mensagemInput.value.trim();
 
   // Verificando se os campos estão preenchidos
-  if (mensagem === '') {
+  if (!mensagem) {
     mensagemInput.focus();
     return;
   }
@@ -28,8 +28,8 @@ async function submitForm(event) {
 
   // Obtendo a data e hora atual formatada
   const date = new Date();
-  const hora = date.toLocaleTimeString('pt-BR', {hour12: true});
-  const dataHora = hora + ' ' + date.toLocaleDateString('pt-BR');
+  const hora = date.toLocaleTimeString('pt-BR', { hour12: true });
+  const dataHora = `${hora} ${date.toLocaleDateString('pt-BR')}`;
 
   // Obtendo informações do navegador e sistema operacional do usuário
   const platform = navigator.userAgentData.platform;
@@ -39,16 +39,21 @@ async function submitForm(event) {
 
   // Enviando os dados do formulário para a API
   await fetch('https://api.sheetmonkey.io/form/3w66mRcD3wLtQvf4fXDkXK', {
-    method: 'post',
+    method: 'POST',
     headers: {
       'Accept': 'application/json',
-      'Content-type': 'application/json',
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({'Endereço IP': ip, Sistema: platform, 'Data e Hora': dataHora, Nome: nome, Mensagem: mensagem}),
+    body: JSON.stringify({
+      'Endereço IP': ip,
+      Sistema: platform,
+      'Data e Hora': dataHora,
+      Nome: nome,
+      Mensagem: mensagem,
+    }),
   });
 }
 
-// Selecionando o formulário e adicionando listener de evento
+// Selecionando o formulário e adicionando um listener de evento
 const form = document.querySelector('form');
 form.addEventListener('submit', submitForm);
-
