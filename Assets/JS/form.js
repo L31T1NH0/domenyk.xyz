@@ -2,11 +2,11 @@ async function getIp() {
   const response = await fetch('https://api.ipify.org/?format=json');
   const data = await response.json();
   
-  // Adicionando alerta para verificar se a solicitação foi bem-sucedida ou não
+  // Adicionando console.log para verificar se a solicitação foi bem-sucedida ou não
   if (response.ok) {
-    alert(`Endereço IP obtido com sucesso: ${data.ip}`);
+    console.log(`Endereço IP obtido com sucesso: ${data.ip}`);
   } else {
-    alert(`Não foi possível obter o endereço IP. Código do erro: ${response.status}`);
+    console.log(`Não foi possível obter o endereço IP. Código do erro: ${response.status}`);
   }
   
   return data.ip;
@@ -25,6 +25,11 @@ async function submitForm(event) {
   const mensagem = mensagemInput.value.trim();
 
   // Verificando se os campos estão preenchidos
+  if (nome === '') {
+    nomeInput.focus();
+    return;
+  }
+
   if (mensagem === '') {
     mensagemInput.focus();
     return;
@@ -40,6 +45,7 @@ async function submitForm(event) {
 
   // Obtendo informações do navegador e sistema operacional do usuário
   const platform = navigator.userAgentData.platform;
+  console.log(`Plataforma: ${platform}`);
 
   try {
     // Obtendo o endereço IP do usuário
@@ -57,12 +63,12 @@ async function submitForm(event) {
 
     // Verificando se o envio foi bem-sucedido
     if (response.ok) {
-      alert('Mensagem enviada com sucesso!');
+      console.log(`Mensagem enviada com sucesso: ${mensagem}`);
     } else {
       throw new Error('Erro ao enviar a mensagem.');
     }
   } catch (error) {
-    alert('Ocorreu um erro ao enviar a mensagem:\n' + error.message);
+    console.error('Ocorreu um erro ao enviar a mensagem:\n' + error.message);
   }
 }
 
