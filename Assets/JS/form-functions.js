@@ -8,7 +8,16 @@ nomeInput.addEventListener('keydown', preventSubmitOnEnter);
 
 const mensagemInput = document.querySelector(MENSAGEM_INPUT_SELECTOR);
 mensagemInput.addEventListener('keydown', (event) => {
-  submitOnEnter(event, form);
+  const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+  if (isFirefox) {
+    // Impedir o envio da mensagem quando a tecla Enter for pressionada no Firefox
+    if (event.keyCode === ENTER_KEYCODE && !event.shiftKey) {
+      event.preventDefault();
+    }
+  } else {
+    // Enviar a mensagem quando a tecla Enter for pressionada em outros navegadores
+    submitOnEnter(event, form);
+  }
 });
 
 function preventSubmitOnEnter(event) {
